@@ -1,0 +1,60 @@
+# macOS system files
+.DS_Store
+
+# R/RStudio files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Figures and outputs (optional: only if you want to regenerate locally)
+# Uncomment the next two lines if you don’t want to track figures/outputs
+# figures/
+# outputs/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+# macOS system files
+.DS_Store
+
+# R/RStudio files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Figures and outputs (optional: only if you want to regenerate locally)
+# Uncomment the next two lines if you don’t want to track figures/outputs
+# figures/
+# outputs/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+# macOS system files
+.DS_Store
+
+# R/RStudio files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Figures and outputs (optional: only if you want to regenerate locally)
+# Uncomment the next two lines if you don’t want to track figures/outputs
+# figures/
+# outputs/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
