@@ -1,5 +1,16 @@
-# Load dataset
-data <- read_csv("/Users/divyanshchawlaa/Documents/Gisma/Datasets/Ecommerce_project/data/ecommerce-data.csv")
+library(tidyverse)
+library(lubridate)
+library(janitor)
+
+# Read full dataset
+data_full <- read_csv("/Users/divyanshchawlaa/Documents/Gisma/Datasets/Ecommerce_project/data/ecommerce-data.csv")
+
+
+# Save first 200 rows as a sample CSV
+write_csv(head(data_full, 200), "/Users/divyanshchawlaa/Documents/Gisma/Datasets/Ecommerce_project/data/ecommerce-sample.csv")
+
+# Use sample for GitHub demonstration
+data <- read_csv("/Users/divyanshchawlaa/Documents/Gisma/Datasets/Ecommerce_project/data/ecommerce-sample.csv")
 
 # Clean names
 data <- clean_names(data)
