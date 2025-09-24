@@ -6,6 +6,9 @@ output:
   pdf_document:
     latex_engine: xelatex
 ---
+## Github Repository URL
+The Github Repository can be accessed here:
+https://github.com/divyanshchawlaa/Ecommerce_project
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.width=7, fig.height=5)
@@ -25,6 +28,7 @@ Our main goals are:
 - Understand buying patterns across weekdays and weekends
 - Provide actionable recommendations to improve customer engagement
 
+**Dataset link:** https://www.kaggle.com/datasets/carrie1/ecommerce-data
 ---
 
 ## 2. Load scripts
@@ -87,7 +91,7 @@ auc_val
 ```
 ROC Curve
 ```{r}
-plot(roc_obj, col="blue", main=paste("ROC Curve (AUC =", round(auc_val,3), ")"))
+plot(roc_obj, col="blue", main=paste("ROC Curve (AUC =", round(auc_val, 3), ")"))
 ```
 Interpretation: The logistic regression model moderately predicts high-value invoices. The ROC curve and AUC provide a performance measure, which can guide operational decisions.
 
@@ -119,9 +123,19 @@ Weekend spending differs from weekdays, suggesting opportunities for targeted we
 - Use the predictive model to flag potential high-value orders in advance.
 - Collect more granular data (product categories, channels) for richer modeling and insights in the future.
 
-## 9. References
-- Customer segmentation with RFM analysis
-- Logistic regression and ROC/AUC for classification
-- Tidyverse for reproducible data cleaning and visualization
+cat("
+## 9. Limitations
 
+- **Dataset Size & Scope:** The sample dataset may not represent all customers, regions, or product categories. Insights may not generalize to other datasets.  
+- **Feature Limitation:** Only a few features were used (AOV, is_weekend). Other important variables like product category, channel, or promotions were not included.  
+- **Model Assumptions:** Logistic regression assumes linearity between log-odds and numeric predictors; some assumptions may not be fully satisfied.  
+- **Outliers & Skewness:** High-value invoices can skew results; robust methods could improve accuracy.  
+- **Timeframe:** Only a snapshot of historical data was analyzed; trends may change over time.
 
+## 10.Future Work
+- **Include More Features:** Product categories, promotions, time of day, and customer demographics could improve models.  
+- **Advanced Models:** Consider random forest, gradient boosting, or neural networks for better predictive performance.  
+- **Segmentation Analysis:** Combine RFM with clustering techniques (e.g., k-means) for richer customer insights.  
+- **Longitudinal Study:** Analyze trends over time to detect seasonality or changes in customer behavior.  
+- **Validation on Larger Dataset:** Test models on larger, real-world datasets for generalizability.
+")
